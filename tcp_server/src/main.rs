@@ -1,4 +1,4 @@
-use std::{net::TcpListener, io::Read};
+use std::{io::Read, net::TcpListener};
 
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:3000").unwrap();
@@ -10,6 +10,9 @@ fn main() {
         let mut buffer = [0; 1024];
 
         let size = stream.read(&mut buffer).unwrap();
-        println!("recived: {:?}", String::from_utf8((&buffer[..size-1]).to_vec()).unwrap() );
+        println!(
+            "recived: {:?}",
+            String::from_utf8((&buffer[..size - 1]).to_vec()).unwrap()
+        );
     }
 }
