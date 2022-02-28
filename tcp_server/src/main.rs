@@ -1,4 +1,4 @@
-use std::{net::TcpListener, io::{Read, Write}};
+use std::{net::TcpListener, io::Read};
 
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:3000").unwrap();
