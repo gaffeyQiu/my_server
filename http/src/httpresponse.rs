@@ -30,7 +30,7 @@ impl<'a> From<HttpResopnse<'a>> for String {
             &res1.status_text(),
             &res1.headers(),
             &res.body.unwrap().len(),
-            &res1.body(),
+            &res1.body()
         )
     }
 }
